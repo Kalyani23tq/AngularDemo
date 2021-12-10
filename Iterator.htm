@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p id="demo"></p>
+    <script>
+
+mycode={};
+       mycode[Symbol.iterator]=function(){
+        let n = 0;
+  done = false;
+  return {
+    next() {
+      n += 10;
+      if (n == 100) {done = true}
+      return {value:n, done:done};
+    }
+  };
+        }
+
+let iterator=mycode[Symbol.iterator]();
+let text="";
+while(true)
+{
+    const x=iterator.next();
+    if(x.done)
+    {
+        break;
+    }
+    else
+    text+=x.value+"<br>";
+}
+      
+document.getElementById("demo").innerHTML=text;
+    </script>
+  
+</body>
+</html>

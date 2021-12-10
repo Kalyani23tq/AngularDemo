@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>javaScript Function Demo</h1>
+    <script>
+        function show() {
+            document.write('hii i am in show function'+"<br>");
+        }
+
+
+        show();
+
+
+        document.write(" //////////////Function with Express  //////////////////// <br>")
+       // function express
+        var x = function add() {
+            document.write("Addition="+(10 + 20)+"</br>");
+        }
+
+        x();
+        document.write(" ////////////// function express with parameter and anonymous //////////////////// <br>")
+       // function express with parameter and anonymous
+        var x = function (a, b) {
+            document.write("Multiplication="+a * b +"<br>");
+        }
+
+        x(3, 4);
+        document.write(" ////////////// function with return value//////////////////// <br>")
+        function add() {
+            return 600;
+        }
+
+        document.write("Method with return type  "+add()+"<br>");
+        document.write(" ////////////// Anonymous Function //////////////////// <br>")
+        //Anonymous function
+        var x = function () {
+            document.write('hii my fun'+"<br>");
+        }
+        x();
+        document.write(" ////////////// Arrow function or fatArrow function //////////////////// <br>")
+       // Arrow function or fatArrow function
+
+       // ()=> { }  syntax for arrow function
+
+        var x = () => {
+            //document.write("my fun script")
+            return 'my script';
+        }
+
+        document.write(x()+"<br>");
+
+
+        var x = () => {
+            document.write("javaScript  <br>");
+            document.write("my Arrowfunction    <br>");
+        }
+
+        x();
+        document.write(" ////////////// Arrow function with single parameter //////////////////// <br>")
+        var x = a => {
+            document.write(a + "  My paramter<br>");
+        }
+        x(899);
+        document.write(" ////////////// Arrow function with multiple parameter //////////////////// <br>")
+        var x = (a,b) => {
+
+            document.write("my paramter is   " + a  +" "+b+"<br> ");
+        }
+        x('Pune',500);
+        document.write(" ////////////// Function with rest Parameter //////////////////// <br>")
+        function fun(x, ...arrgs) {
+            document.write(arrgs + " <br>");
+        }
+        fun('pune', 43, 42);
+
+        fun(30, 'red', 'green', 'blue');
+
+    </script>
+</body>
+
+</html>
